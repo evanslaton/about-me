@@ -1,3 +1,11 @@
 html {
     background: url("../img/millionaire.jpg") no-repeat center center fixed;
 }
+
+h1 {
+    color: white;
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
+    font-size: 4em;
+    margin-top: 15%;
+}
