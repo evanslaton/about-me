@@ -76,26 +76,30 @@ questionOne ();
 //   alert('Wrong... it\'s red...');
 // }
 
-// // Gives the user four chances to guess the number
-// while (numGuess !== num && counter < 4) {
-//   numGuess = parseInt(prompt('I\'m thinking of a special number between 0 and 25. Guess what it is!'));
-//   console.log(userName + '\'s guess:', numGuess);
+// Question 6: Gives the user four chances to guess the number
+function questionSix () {
+  while (numGuess !== num && counter < 4) {
+    numGuess = parseInt(prompt('I\'m thinking of a special number between 0 and 25. Guess what it is!'));
+    console.log(userName + '\'s guess:', numGuess);
 
-//   if (numGuess === num) {
-//     alert('You have the gift!');
-//     correctAnswers++;
-//   } else if (counter === 3) {
-//     alert('You only had one job... the number was ' + num);
-//   } else if (numGuess > num) {
-//     alert('Too high.');
-//   } else if (isNaN(numGuess)) {
-//     alert('I said to guess a NUMBER.');
-//   } else {
-//     alert('Too low.');
-//   }
-//   counter++;
-// }
-// counter = 0;
+    if (numGuess === num) {
+      alert('You have the gift!');
+      correctAnswers++;
+    } else if (counter === 3) {
+      alert('You only had one job... the number was ' + num);
+    } else if (numGuess > num) {
+      alert('Too high.');
+    } else if (isNaN(numGuess)) {
+      alert('I said to guess a NUMBER.');
+    } else {
+      alert('Too low.');
+    }
+    counter++;
+  }
+  counter = 0;
+}
+
+questionSix ();
 
 // // Gives the user six chances to guess one of my least favorite vegetables
 // while (guessedRight && counter < 6) {
