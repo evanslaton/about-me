@@ -1,11 +1,75 @@
 html {
-    background: url("../img/millionaire.jpg") no-repeat center center fixed;
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    color: white;
-    text-shadow: 1px 1px 10px black;
     text-align: center;
-    font-size: 4em;
-    margin-top: 15%;
+    font-size: 3em;
+    margin-top: 25px;
+    padding: 10px 0;
+    color: white;
+    background-color: lightblue;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    text-shadow: 1px 1px 5px black;
+    box-shadow: 0 0 3px black;
+}
+
+section {
+    width: 500px;
+    margin: 25px auto;
+    padding: 10px 0 35px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+}
+
+p {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.2em;
+}
+
+p:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+p:nth-child(4) {
+    margin-top: 45px;
+}
+
+ul, ol {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 1em;
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+section ol {
+    padding-left: 120px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+abbr {
+    text-decoration: none;
 }
