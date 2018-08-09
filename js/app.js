@@ -13,7 +13,7 @@ var leastFavVeggiesString = leastFavVeggies.join(', ');
 var userName;
 
 // Gets the user's name and introduces the game
-function getName ()  {
+function getName () {
   userName = prompt('What is your name potential new friend?');
   console.log('The user\'s name: ', userName);
   alert('Hello potential new friend ' + userName + '. I\'m going to ask you five yes/no questions about me. Please answer using y/n or yes/no.');
@@ -22,7 +22,7 @@ function getName ()  {
 getName ();
 
 // Asks the user 5 y/n questions
-function questionOne ()  {
+function questionOne () {
   var answerOne = prompt('Have I ever been scuba diving?').toLowerCase();
   console.log(userName + '\'s answer to the first question:', answerOne);
   if (answerOne === 'n' || answerOne === 'no') {
@@ -33,7 +33,7 @@ function questionOne ()  {
   }
 }
 
-questionOne ();
+// questionOne ();
 
 
 // // Question 2
@@ -99,46 +99,46 @@ function questionSix () {
   counter = 0;
 }
 
-questionSix ();
+// questionSix ();
 
-// // Gives the user six chances to guess one of my least favorite vegetables
-// while (guessedRight && counter < 6) {
-//   counter++;
-//   vegGuess = prompt('Can you guess what one of my least favorite vegetables is?').toLowerCase();
-//   console.log(userName + '\'s guess:', vegGuess);
+// Question 7: Gives the user six chances to guess one of my least favorite vegetables
+function questionSeven () {
+  while (guessedRight && counter < 6) {
+    counter++;
+    vegGuess = prompt('Can you guess what one of my least favorite vegetables is?').toLowerCase();
+    console.log(userName + '\'s guess:', vegGuess);
 
-//   // Accounts for the user entering plural forms
-//   if (vegGuess === 'tomatoes') {
-//     vegGuess = 'tomato';
-//   } else if (vegGuess === 'eggplants') {
-//     vegGuess = 'eggplant';
-//   }
+    // Accounts for the user entering plural forms
+    if (vegGuess === 'tomatoes') {
+      vegGuess = 'tomato';
+    } else if (vegGuess === 'eggplants') {
+      vegGuess = 'eggplant';
+    }
 
-//   for (var i = 0; i < leastFavVeggies.length; i++) {
-//     if (vegGuess === leastFavVeggies[i]) {
-//       alert('Right! I hate ' + leastFavVeggiesString);
-//       correctAnswers++;
-//       guessedRight = false;
-//     }
-//   }
-//   if (guessedRight && counter < 6) {
-//     alert('Nope, try again.');
-//   } else if (counter === 6) {
-//     alert('Nope, I hate ' + leastFavVeggiesString);
-//   }
-// }
+    for (var i = 0; i < leastFavVeggies.length; i++) {
+      if (vegGuess === leastFavVeggies[i]) {
+        alert('Right! I hate ' + leastFavVeggiesString);
+        correctAnswers++;
+        guessedRight = false;
+      }
+    }
+    if (guessedRight && counter < 6) {
+      alert('Nope, try again.');
+    } else if (counter === 6) {
+      alert('Nope, I hate ' + leastFavVeggiesString);
+    }
+  }
+}
 
-// if (correctAnswers === 0) {
-//   finalMsg = userName + ', out of 7 questions you didn\'t get a single one right.';
-// } else if (correctAnswers > 3) {
-//   finalMsg = userName + ', you got a whopping ' + correctAnswers + ' out of 7 questions correct!';
-// } else {
-//   finalMsg = userName + ', you only got ' + correctAnswers + ' out of 7 questions correct...';
-// }
+questionSeven ();
 
-// alert(finalMsg);
+// Notifies user how many correct answers they got out of total
+if (correctAnswers === 0) {
+  finalMsg = userName + ', out of 7 questions you didn\'t get a single one right.';
+} else if (correctAnswers > 3) {
+  finalMsg = userName + ', you got a whopping ' + correctAnswers + ' out of 7 questions correct!';
+} else {
+  finalMsg = userName + ', you only got ' + correctAnswers + ' out of 7 questions correct...';
+}
 
-
-
-
-
+alert(finalMsg);
