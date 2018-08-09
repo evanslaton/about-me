@@ -33,48 +33,63 @@ function questionOne () {
   }
 }
 
-// questionOne ();
+questionOne ();
 
+// Question 2
+function questionTwo () {
+  var answerTwo = prompt('Is my favorite beverage Diet Dr. Pepper?').toLowerCase();
+  console.log(userName + '\'s answer to the second question:', answerTwo);
+  if (answerTwo === 'y' || answerTwo === 'yes') {
+    alert('Heck Yes! I\'m addicted to that stuff.');
+    correctAnswers++;
+  } else {
+    alert('Wrong...');
+  }
+}
 
-// // Question 2
-// var answerTwo = prompt('Is my favorite beverage Diet Dr. Pepper?').toLowerCase();
-// console.log(userName + '\'s answer to the second question:', answerTwo);
-// if (answerTwo === 'y' || answerTwo === 'yes') {
-//   alert('Heck Yes! I\'m addicted to that stuff.');
-//   correctAnswers++;
-// } else {
-//   alert('Wrong...');
-// }
+questionTwo ();
 
-// // Question 3
-// var answerThree = prompt('Am I a twin?').toLowerCase();
-// console.log(userName + '\'s answer to the third question:', answerThree);
-// if (answerThree === 'y' || answerThree === 'yes') {
-//   alert('Right! You\'re not just seeing double!');
-//   correctAnswers++;
-// } else {
-//   alert('Wrong...');
-// }
+// Question 3
+function questionThree () {
+  var answerThree = prompt('Am I a twin?').toLowerCase();
+  console.log(userName + '\'s answer to the third question:', answerThree);
+  if (answerThree === 'y' || answerThree === 'yes') {
+    alert('Right! You\'re not just seeing double!');
+    correctAnswers++;
+  } else {
+    alert('Wrong...');
+  }
+}
 
-// // Question 4
-// var answerFour = prompt('Do I like to travel?').toLowerCase();
-// console.log(userName + '\'s answer to the fourth question:', answerFour);
-// if (answerFour === 'y' || answerFour === 'yes') {
-//   alert('Good answer! It\'s one of my favorite things to do.');
-//   correctAnswers++;
-// } else {
-//   alert('Wrong...');
-// }
+questionThree ();
 
-// // Question 5
-// var answerFive = prompt('Is my favorite color blue?').toLowerCase();
-// console.log(userName + '\'s answer to the fifth question:', answerFive);
-// if (answerFive === 'n' || answerFive === 'no') {
-//   alert('Correct! My favorite color is red.');
-//   correctAnswers++;
-// } else {
-//   alert('Wrong... it\'s red...');
-// }
+// Question 4
+function questionFour () {
+  var answerFour = prompt('Do I like to travel?').toLowerCase();
+  console.log(userName + '\'s answer to the fourth question:', answerFour);
+  if (answerFour === 'y' || answerFour === 'yes') {
+    alert('Good answer! It\'s one of my favorite things to do.');
+    correctAnswers++;
+  } else {
+    alert('Wrong...');
+  }
+}
+
+questionFour ();
+
+// Question 5
+function questionFive () {
+  var answerFive = prompt('Is my favorite color blue?').toLowerCase();
+  console.log(userName + '\'s answer to the fifth question:', answerFive);
+  if (answerFive === 'n' || answerFive === 'no') {
+    alert('Correct! My favorite color is red.');
+    correctAnswers++;
+  } else {
+    alert('Wrong... it\'s red...');
+  }
+}
+
+questionFive ();
 
 // Question 6: Gives the user four chances to guess the number
 function questionSix () {
@@ -99,7 +114,7 @@ function questionSix () {
   counter = 0;
 }
 
-// questionSix ();
+questionSix ();
 
 // Question 7: Gives the user six chances to guess one of my least favorite vegetables
 function questionSeven () {
