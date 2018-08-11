@@ -4,13 +4,12 @@
 var num = 5;
 var numGuess;
 var counter = 0;
-var guessedRight = true;
+var stillGuessing = true;
 var correctAnswers = 0;
 var vegGuess;
 var finalMsg;
 var leastFavVeggies = ['tomato', 'eggplant', 'kale'];
 var leastFavVeggiesString = leastFavVeggies.join(', ');
-var userName;
 
 var questions = ['What is your name potential new friend?',
   'Have I ever been scuba diving?',
@@ -140,7 +139,7 @@ for (var i = 0; i < questions.length; i++) {
 function questionSix () {
   while (numGuess !== num && counter < 4) {
     numGuess = parseInt(prompt('I\'m thinking of a special number between 0 and 25. Guess what it is!'));
-    console.log(userName + '\'s guess:', numGuess);
+    console.log(answers[0] + '\'s guess:', numGuess);
 
     if (numGuess === num) {
       alert('You have the gift!');
@@ -163,10 +162,10 @@ questionSix ();
 
 // Question 7: Gives the user six chances to guess one of my least favorite vegetables
 function questionSeven () {
-  while (guessedRight && counter < 6) {
+  while (stillGuessing && counter < 6) {
     counter++;
     vegGuess = prompt('Can you guess what one of my least favorite vegetables is?').toLowerCase();
-    console.log(userName + '\'s guess:', vegGuess);
+    console.log(answers[0] + '\'s guess:', vegGuess);
 
     // Accounts for the user entering plural forms
     if (vegGuess === 'tomatoes') {
@@ -179,10 +178,10 @@ function questionSeven () {
       if (vegGuess === leastFavVeggies[i]) {
         alert('Right! I hate ' + leastFavVeggiesString);
         correctAnswers++;
-        guessedRight = false;
+        stillGuessing = false;
       }
     }
-    if (guessedRight && counter < 6) {
+    if (stillGuessing && counter < 6) {
       alert('Nope, try again.');
     } else if (counter === 6) {
       alert('Nope, I hate ' + leastFavVeggiesString);
