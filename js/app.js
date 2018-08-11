@@ -1,7 +1,7 @@
 'use strict';
 
 // Variable and array declarations
-var num = 5;
+var num = Math.floor((Math.random() * 25) + 0);
 var numGuess;
 var counter = 0;
 var stillGuessing = true;
@@ -41,7 +41,7 @@ for (var i = 0; i < questions.length; i++) {
   }
 
   // Checks answers and alerts user if they were correct or not
-  if (i === 0) {
+  if (i === 0 && answers[i]) {
     answers[i] = answers[i].split('');
     answers[i][0] = answers[i][0].toUpperCase();
     answers[i] = answers[i].join('');
@@ -137,6 +137,7 @@ for (var i = 0; i < questions.length; i++) {
 
 //Question 6: Gives the user four chances to guess the number
 function questionSix () {
+  console.log('Random number:',num);
   while (numGuess !== num && counter < 4) {
     numGuess = parseInt(prompt('I\'m thinking of a special number between 0 and 25. Guess what it is!'));
     console.log(answers[0] + '\'s guess:', numGuess);
