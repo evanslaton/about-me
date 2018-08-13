@@ -89,6 +89,7 @@ function questionSix () {
   // Adds new ordered list to keep track of guesses for question 6
   newLi('Guesses:', aList);
   newOL(aList, 'numGuessList');
+  var numGuessList = document.getElementById('numGuessList');
 
   while (numGuess !== num && counter < 4) {
     numGuess = parseInt(prompt('I\'m thinking of a special number between 0 and 25. Guess what it is!'));
@@ -122,6 +123,7 @@ function questionSeven() {
   newLi('Can you guess what one of my least favorite vegetables is?', qList);
   newLi('Guesses:', aList);
   newOL(aList, 'vegGuessList');
+  var vegGuessList = document.getElementById('vegGuessList');
 
   while (stillGuessing && counter < 6) {
     counter++;
